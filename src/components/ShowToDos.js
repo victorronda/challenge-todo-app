@@ -29,8 +29,8 @@ const ShowToDos = () => {
 			<ul>
 				{allToDos.map((elem, i) => {
 					return (
-						<div className="d-flex flex-row justify-content-center mx-auto w-100 text-center">
-							<div className="listTasks">
+						<div key={i} className="d-flex flex-row justify-content-center mx-auto w-100 text-center">
+							<div className="listTasks" key={i}>
 								<li style={{ listStyleType: 'none' }} key={i}>
 									<h3>Title: {elem.title}</h3>
 									<p>Description: {elem.body}</p>
