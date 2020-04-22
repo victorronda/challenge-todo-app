@@ -29,17 +29,24 @@ const ShowToDos = () => {
 			<ul>
 				{allToDos.map((elem, i) => {
 					return (
-                        <div className="d-flex flex-row justify-content-center mx-auto w-100 text-center">
-                        <div className="listTasks">
-                            <li style={{ listStyleType: 'none' }} key={i}>
-                                <h3>Title: {elem.title}</h3>
-                                <p>Descrption: {elem.body}</p>
-                                <button className="btn btn-danger" value={elem._id} onClick={(e) => handleDelete(e)}>
-                                    Delete
-                                </button>
-                            </li>
-                        </div>
-                        </div>
+						<div className="d-flex flex-row justify-content-center mx-auto w-100 text-center">
+							<div className="listTasks">
+								<li style={{ listStyleType: 'none' }} key={i}>
+									<h3>Title: {elem.title}</h3>
+									<p>Description: {elem.body}</p>
+									<Link className="btn btn-info" to={`/todos/edit/${elem._id}`}>
+										Edit
+									</Link>
+									<button
+										className="btn btn-danger"
+										value={elem._id}
+										onClick={(e) => handleDelete(e)}
+									>
+										Delete
+									</button>
+								</li>
+							</div>
+						</div>
 					);
 				})}
 			</ul>
