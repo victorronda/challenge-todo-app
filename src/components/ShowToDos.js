@@ -26,10 +26,10 @@ const ShowToDos = () => {
 	return (
 		<div>
 			<h1>ALL YOUR TASKS</h1>
-			<ul>
+			<ul className="d-flex flex-column-reverse">
 				{allToDos.map((elem, i) => {
 					return (
-						<div key={i} className="d-flex flex-row justify-content-center mx-auto w-100 text-center">
+						<div key={i} className="d-flex flex justify-content-center mx-auto w-100 text-center">
 							<div className="listTasks" key={i}>
 								<li style={{ listStyleType: 'none' }} key={i}>
 									<h3>Title: {elem.title}</h3>
